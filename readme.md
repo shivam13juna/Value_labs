@@ -24,4 +24,11 @@
  - **Methodology used for changing words** : I've used a method that creates distractors in 7 stages. In first stages it finds if the sentence has a number, if yes it increments it for creating other distractors. If no number is there it finds propositions, if not found it finds adjectives, next is conjunctions, adpositions, nouns and adverbs. Why this specific order of search? Well it was giving best set of results, I tried different permutations of these linguistic entities. 
  - **How to find antonym and synonyms?** : I've used wordnet from NLTK, for finding antonyms and synonyms. As silky(hacker earth support) said I can use word embeddings for the code. 
 
+ # Leaderboard
+[Competition link](https://www.hackerearth.com/challenges/hiring/valuelabs-ml-hiring-2019/)
+
+# Shortlisted
+
+<img src="value_labs.png">
+
  **THANK YOU!!**
