@@ -17,9 +17,11 @@
  - Score of your submitted prediction file = mean ( cosine_similarity between distractor vectors for each entry in test.csv)
 
  
-**Common Issues Faced : How to handle them?**:
+**My approach?**:
 
- - **Download Dataset giving XML error**: Try restarting your session after clearing browser cache/cookies and try again. If you still face an issue, please raise a ticket with us.
- - **Upload Prediction File not working**: Ensure you are compliant with the Guidelines and FAQs. You will face this error if you exceed the maximum number of prediction file uploads allowed.
- - **Exceptions (Incorrect number of Rows / Incorrect Headers / Prediction missing for a key)** : For this problem statement, we recommend you to update the 'distractor' column in Results.csv with your predictions, following the format explained above
- - **Evaluation is getting stuck in loop** : We recommend you to immediately refresh your session and start afresh with a cleared cache. Please ensure your predictions.csv matches the file format Results.csv. Plesae check that all the above mentioned checks have been conducted. If you still face an issue, please raise a ticket with us.	
+ - **Pre-processing of dataset**: Pre-processing mainly involves splitting all the columns based on punctuation, while preserving all the blank-spaces as we're gonna need them while constructing distractors.
+ - **Construction of distractors**: Objective was to change results for questions in such a way that they can be appropriate distractors. So I have targetted specific type of words for changing them by their antonyms and synonyms. 
+ - **Methodology used for changing words** : I've used a method that creates distractors in 7 stages. In first stages it finds if the sentence has a number, if yes it increments it for creating other distractors. If no number is there it finds propositions, if not found it finds adjectives, next is conjunctions, adpositions, nouns and adverbs. Why this specific order of search? Well it was giving best set of results, I tried different permutations of these linguistic entities. 
+ - **How to find antonym and synonyms?** : I've used wordnet from NLTK, for finding antonyms and synonyms. As silky(hacker earth support) said I can use word embeddings for the code. 
+
+ **THANK YOU!!**
