@@ -113,13 +113,8 @@ for i in range(len(centre)):
             done[i] += 3
             break
         except:
-#             pass
-            if done[i] == 0:
-                dist[i].append('~'+test['answer_text'].values[i])
-                dist[i].append('~' + test['answer_text'].values[i])
-                dist[i].append('No of the above')
-                done[i]+=3
-                break
+            pass
+          
 
         
     #Stage 2 Changing all the proposition in the sentence by antonyms  
